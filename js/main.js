@@ -42,8 +42,8 @@ const CLASSES = [
 ];
 
 const SCENES = [
-  { id: '1', name: '玛法大陆', description: '广袤的复古原野，山川河流间散落着神秘遗迹与怪物巢穴', image: './images/scene-mapafa.jpg' },
-  { id: '2', name: '暗黑地牢', description: '阴森的地下迷宫，暗藏珍稀宝物与凶猛BOSS', image: './images/scene-dungeon.jpg' },
+  { id: '1', name: '玛法大陆', description: '广袤的复古原野，山川河流间散落着神秘遗迹与怪物巢穴', image: './images/scene-mapafa-v2.jpg' },
+  { id: '2', name: '暗黑地牢', description: '阴森的地下迷宫，暗藏珍稀宝物与凶猛BOSS', image: './images/scene-dungeon-v2.jpg' },
   { id: '3', name: '沙城攻伐', description: '万人攻沙史诗战场，行会争夺至高荣耀', image: './images/scene-sandcastle-v5.jpg' },
 ];
 
