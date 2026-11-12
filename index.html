@@ -35,7 +35,7 @@
         </nav>
 
         <div class="header-actions">
-          <button class="btn btn-primary" data-scroll-to="download">立即下载</button>
+          <button class="btn btn-primary" data-open-wechat>扫码加客服预约</button>
           <button class="nav-toggle" id="nav-toggle" aria-label="菜单" aria-expanded="false">
             <svg id="icon-menu" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             <svg id="icon-close" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
@@ -51,7 +51,7 @@
         <a href="#news">新闻公告</a>
         <a href="#download">下载专区</a>
         <a href="#recharge">点卡充值</a>
-        <button class="btn btn-primary w-full" data-scroll-to="download">立即下载</button>
+        <button class="btn btn-primary w-full" data-open-wechat>扫码加客服预约</button>
       </div>
     </header>
 
@@ -87,9 +87,9 @@
                 无商城、无 VIP、无付费战力，真正公平的游戏环境。
               </p>
               <div class="hero-cta">
-                <button class="btn btn-primary btn-lg" data-toast="下载功能为演示占位，暂不提供真实下载">
+                <button class="btn btn-primary btn-lg" data-open-wechat>
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-                  立即下载游戏
+                  扫码添加客服预约下载
                 </button>
                 <button class="btn btn-outline btn-lg" data-scroll-to="features">了解更多</button>
               </div>
@@ -106,11 +106,11 @@
               </h3>
               <div class="server-row">
                 <span>当前大区</span>
-                <strong>赤月传说</strong>
+                <strong>公测一区</strong>
               </div>
               <div class="server-row">
                 <span>开服时间</span>
-                <strong>2025-01-20 19:00</strong>
+                <strong>待定</strong>
               </div>
               <div class="server-row">
                 <span>已开大区</span>
@@ -287,6 +287,18 @@
       </div>
     </div>
 
+    <!-- 专属客服微信预约弹窗 -->
+    <div class="dialog" id="wechat-dialog" hidden>
+      <div class="dialog-backdrop" data-close-wechat></div>
+      <div class="dialog-panel" role="dialog" aria-modal="true">
+        <button class="dialog-close" data-close-wechat aria-label="关闭">×</button>
+        <h3>添加专属客服微信</h3>
+        <div class="wechat-qr-wrap">
+          <img src="./images/wechat-qr.png" alt="专属客服微信二维码" />
+        </div>
+        <p class="wechat-qr-tip">扫码添加专属客服，预约游戏下载，获取开服公告与版本资讯</p>
+      </div>
+    </div>
     <!-- 公告详情弹窗 -->
     <div class="dialog" id="news-dialog" hidden>
       <div class="dialog-backdrop" data-close-dialog></div>
