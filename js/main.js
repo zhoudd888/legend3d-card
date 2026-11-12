@@ -231,6 +231,16 @@ function closeDialog() {
   document.body.style.overflow = '';
 }
 
+function openWechatDialog() {
+  $('#wechat-dialog').hidden = false;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeWechatDialog() {
+  $('#wechat-dialog').hidden = true;
+  document.body.style.overflow = '';
+}
+
 /* ============ 渲染：下载 / 充值 / 页脚 ============ */
 function renderDownloads() {
   $('#download-grid').innerHTML = PLATFORMS.map((p) => `
@@ -239,10 +249,10 @@ function renderDownloads() {
       <h3>${esc(p.name)}</h3>
       <p class="platform-desc">${esc(p.desc)}</p>
       <p class="platform-size">安装包大小约 ${p.size}</p>
-      <button class="btn btn-primary" data-toast="「${esc(p.name)}」下载功能为演示占位，暂不提供真实下载">
-        ⬇ 立即下载
+      <button class="btn btn-primary" data-open-wechat>
+        扫码预约下载
       </button>
-      <div class="platform-demo">※ 演示占位，非真实下载</div>
+      <div class="platform-demo">扫码添加专属客服，获取下载方式</div>
     </div>
   `).join('');
 }
@@ -311,6 +321,8 @@ function bindGlobalEvents() {
 
   // Toast 按钮（事件委托，覆盖动态渲染内容）
   document.body.addEventListener('click', (e) => {
+    const wechatBtn = e.target.closest('[data-open-wechat]');
+    if (wechatBtn) { openWechatDialog(); return; }
     const toastBtn = e.target.closest('[data-toast]');
     if (toastBtn) showToast(toastBtn.dataset.toast);
   });
@@ -327,8 +339,9 @@ function bindGlobalEvents() {
   // Lightbox / Dialog 关闭
   document.querySelectorAll('[data-close-lightbox]').forEach((el) => el.addEventListener('click', closeLightbox));
   document.querySelectorAll('[data-close-dialog]').forEach((el) => el.addEventListener('click', closeDialog));
+  document.querySelectorAll('[data-close-wechat]').forEach((el) => el.addEventListener('click', closeWechatDialog));
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') { closeLightbox(); closeDialog(); }
+    if (e.key === 'Escape') { closeLightbox(); closeDialog(); closeWechatDialog(); }
   });
 
   // 年份
