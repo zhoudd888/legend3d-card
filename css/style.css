@@ -412,3 +412,9 @@ button { font-family: inherit; cursor: pointer; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .news-row { flex-direction: row; flex-wrap: wrap; }
 }
+
+/* ============ 客服微信二维码弹窗 ============ */
+.wechat-qr-wrap { display: flex; justify-content: center; margin: 6px 0 18px; }
+.wechat-qr-wrap img { width: 220px; height: 220px; object-fit: contain; background: #fff; border-radius: 12px; border: 1px solid rgba(217,164,65,0.4); box-shadow: var(--shadow); }
+.wechat-qr-tip { text-align: center; font-size: 14px; color: rgba(243,234,216,0.78); line-height: 1.8; }
+@media (max-width: 480px) { .wechat-qr-wrap img { width: 180px; height: 180px; } }
