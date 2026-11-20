@@ -242,6 +242,16 @@ function closeWechatDialog() {
   document.body.style.overflow = '';
 }
 
+function openGiftDialog() {
+  $('#gift-dialog').hidden = false;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeGiftDialog() {
+  $('#gift-dialog').hidden = true;
+  document.body.style.overflow = '';
+}
+
 /* ============ 渲染：下载 / 充值 / 页脚 ============ */
 function renderDownloads() {
   $('#download-grid').innerHTML = PLATFORMS.map((p) => `
@@ -322,8 +332,10 @@ function bindGlobalEvents() {
 
   // Toast 按钮（事件委托，覆盖动态渲染内容）
   document.body.addEventListener('click', (e) => {
+    const giftBtn = e.target.closest('[data-open-gift]');
+    if (giftBtn) { openGiftDialog(); return; }
     const wechatBtn = e.target.closest('[data-open-wechat]');
-    if (wechatBtn) { openWechatDialog(); return; }
+    if (wechatBtn) { closeGiftDialog(); openWechatDialog(); return; }
     const toastBtn = e.target.closest('[data-toast]');
     if (toastBtn) showToast(toastBtn.dataset.toast);
   });
@@ -341,8 +353,9 @@ function bindGlobalEvents() {
   document.querySelectorAll('[data-close-lightbox]').forEach((el) => el.addEventListener('click', closeLightbox));
   document.querySelectorAll('[data-close-dialog]').forEach((el) => el.addEventListener('click', closeDialog));
   document.querySelectorAll('[data-close-wechat]').forEach((el) => el.addEventListener('click', closeWechatDialog));
+  document.querySelectorAll('[data-close-gift]').forEach((el) => el.addEventListener('click', closeGiftDialog));
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') { closeLightbox(); closeDialog(); closeWechatDialog(); }
+    if (e.key === 'Escape') { closeLightbox(); closeDialog(); closeWechatDialog(); closeGiftDialog(); }
   });
 
   // 年份
