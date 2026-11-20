@@ -433,3 +433,4 @@ button { font-family: inherit; cursor: pointer; }
 .gift-dialog-list li { padding: 10px 12px; margin-bottom: 8px; border-radius: 10px; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(138, 100, 32, 0.25); color: rgba(243, 234, 216, 0.85); }
 .gift-dialog-list li::before { content: '🎁 '; }
 .gift-dialog-note { font-size: 13px; line-height: 1.8; color: rgba(243, 234, 216, 0.65); margin-bottom: 18px; }
+.wechat-id { font-weight: 700; color: var(--gold); letter-spacing: .5px; margin-top: 10px; }
