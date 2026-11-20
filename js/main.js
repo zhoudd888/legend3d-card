@@ -2,7 +2,7 @@
 const FEATURES = [
   { id: '1', icon: '🛡️', title: '纯净无商城', description: '商城不卖任何提升战力的装备宝石，点卡仅代表游戏时长，不带来属性差距' },
   { id: '2', icon: '⚔️', title: '公平掉落', description: '大佬与散人共用同一套掉落规则，顶级装备全靠打宝产出，散人也能站稳脚跟' },
-  { id: '3', icon: '⏱️', title: '点卡时长计费', description: '仅按游戏时长收取点卡，无VIP、无付费战力，真正公平竞技环境' },
+  { id: '3', icon: '⏱️', title: '点卡时长计费', description: '1元=10点卡、1点卡兑换60分钟，离线连续计时；金币可经交易行兑换点卡，无VIP、无付费战力' },
   { id: '4', icon: '📱', title: '三端互通', description: '支持PC、安卓、鸿蒙、iOS，同一账号多设备数据互通、自由切换' },
   { id: '5', icon: '🏰', title: '经典三职业团战', description: '行会争夺、BOSS抢怪、万人攻沙，考验配合走位与角色培养而非充值' },
   { id: '6', icon: '⚙️', title: '内置原生挂机', description: '内置挂机解放双手，严打第三方外挂，查实即封号，维护公平环境' },
@@ -57,9 +57,14 @@ const PLATFORMS = [
 ];
 
 const PLANS = [
-  { id: '1', name: '月卡', duration: '30天', hours: 720, price: 30, originalPrice: 36, tag: '新手推荐', featured: false },
-  { id: '2', name: '季卡', duration: '90天', hours: 2160, price: 80, originalPrice: 108, tag: '热销', featured: true },
-  { id: '3', name: '年卡', duration: '365天', hours: 8760, price: 280, originalPrice: 438, tag: '超值', featured: false },
+  { id: '1', points: 60, price: 6, hours: 60, days: '约2.5天', tag: '', featured: false },
+  { id: '2', points: 300, price: 30, hours: 300, days: '约12.5天', tag: '', featured: false },
+  { id: '3', points: 980, price: 98, hours: 980, days: '约40.8天', tag: '热门', featured: true },
+  { id: '4', points: 1980, price: 198, hours: 1980, days: '约82.5天', tag: '', featured: false },
+  { id: '5', points: 3280, price: 328, hours: 3280, days: '约136.7天', tag: '', featured: false },
+  { id: '6', points: 5000, price: 500, hours: 5000, days: '约208.3天', tag: '', featured: false },
+  { id: '7', points: 6480, price: 648, hours: 6480, days: '约270天', tag: '', featured: false },
+  { id: '8', points: 10000, price: 1000, hours: 10000, days: '约416.7天', tag: '超值', featured: false },
 ];
 
 const NAV_LINKS = [
@@ -257,19 +262,16 @@ function renderPlans() {
       ${p.tag ? `<div class="plan-tag">${esc(p.tag)}</div>` : ''}
       <div class="plan-watermark">演示占位</div>
       <div class="plan-head">
-        <h3>${esc(p.name)}</h3>
-        <p>${p.duration} · ${p.hours} 小时</p>
+        <h3>${p.points} 点卡</h3>
+        <p>${p.hours} 小时 · ${p.days}</p>
       </div>
-      <div class="plan-body">
-        <div class="plan-price">
-          <div class="amount"><span class="currency">¥</span><span class="price-num">${p.price}</span></div>
-          ${p.originalPrice ? `<div class="original">原价 ¥${p.originalPrice}</div>` : ''}
-        </div>
-        <ul class="plan-features">
-          <li>纯净无商城</li><li>公平掉落体验</li><li>全职业平衡</li><li>三端互通</li>
-        </ul>
-        <button class="btn ${p.featured ? '' : 'btn-primary'}" data-toast="「${esc(p.name)}」充值功能为演示占位，不涉及真实支付">立即充值</button>
+      <div class="plan-price">
+        <div class="amount"><span class="currency">¥</span><span class="price-num">${p.price}</span></div>
       </div>
+      <ul class="plan-features">
+        <li>1元 = 10点卡</li><li>1点卡 = 60分钟</li><li>离线连续计时</li>
+      </ul>
+      <button class="btn ${p.featured ? '' : 'btn-primary'}" data-toast="「${p.points}点卡」充值为展示用途，不涉及真实支付">立即充值</button>
     </div>
   `).join('');
 }
