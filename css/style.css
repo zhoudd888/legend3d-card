@@ -418,3 +418,4 @@ button { font-family: inherit; cursor: pointer; }
 .wechat-qr-wrap img { width: min(220px, 72vw); height: auto; aspect-ratio: 1 / 1; max-width: 100%; object-fit: contain; background: #fff; border-radius: 12px; border: 1px solid rgba(217,164,65,0.4); box-shadow: var(--shadow); }
 .wechat-qr-tip { text-align: center; font-size: 14px; color: rgba(243,234,216,0.78); line-height: 1.8; }
 @media (max-width: 480px) { .wechat-qr-wrap img { width: 180px; } }
+.wechat-assist { margin-top: 10px; }
