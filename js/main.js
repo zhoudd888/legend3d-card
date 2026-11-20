@@ -47,23 +47,6 @@ const SCENES = [
   { id: '3', name: '沙城攻伐', description: '万人攻沙史诗战场，行会争夺至高荣耀', image: './images/scene-sandcastle-v5.jpg' },
 ];
 
-const NEWS = [
-  {
-    id: '1', title: '玛法大陆新区「赤月传说」今日火爆开启', category: 'server', categoryLabel: '开服公告', date: '2025-01-15',
-    summary: '全新点卡制新区开放，百万豪礼等你来拿，还原最纯粹的1.76复古体验。',
-    content: '尊敬的玩家：\n\n《传奇3D纯净点卡版》全新大区「赤月传说」已于今日19:00正式开启！\n\n开服活动：\n• 首周双倍经验\n• 首次充值点卡送5小时时长\n• 等级排名前100名获得专属称号\n\n纯净无商城，公平打宝，期待您的加入！',
-  },
-  {
-    id: '2', title: '春节活动「龙腾玛法」即将上线', category: 'event', categoryLabel: '活动公告', date: '2025-01-10',
-    summary: '新春特别活动，打宝掉落翻倍，集龙符兑换稀有道具，与行会兄弟共度佳节。',
-    content: '新春佳节将至，玛法大陆为各位勇士准备了丰富的节日活动：\n\n活动时间：1月20日 - 2月5日\n\n活动内容：\n1. 全地图BOSS掉落翻倍\n2. 集龙符兑换永久称号与外观\n3. 行会拜年活动，行会积分排名奖励\n\n更多活动详情请留意游戏内公告。',
-  },
-  {
-    id: '3', title: '版本更新 v1.2.0：新增沙城攻伐玩法', category: 'update', categoryLabel: '版本更新', date: '2025-01-05',
-    summary: '沙巴克攻城战正式开放，新增坐骑系统与装备修炼，优化三端互通体验。',
-    content: '本次版本更新内容如下：\n\n【新增内容】\n• 沙巴克攻城战玩法，每周六晚开放\n• 坐骑系统，野外BOSS掉落稀有坐骑\n• 装备修炼系统，提升装备基础属性\n\n【优化调整】\n• 优化三端互通同步性能\n• 调整部分BOSS刷新时间\n• 修复已知BUG若干\n\n感谢各位玩家的支持与反馈！',
-  },
-];
 
 const DL_URL = 'https://89097.youxin75.com/qudao.php?s=/Download/f/WzUyMjEsNTIyMCw4OTA5N10=';
 const PLATFORMS = [
