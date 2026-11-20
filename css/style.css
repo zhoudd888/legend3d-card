@@ -419,3 +419,17 @@ button { font-family: inherit; cursor: pointer; }
 .wechat-qr-tip { text-align: center; font-size: 14px; color: rgba(243,234,216,0.78); line-height: 1.8; }
 @media (max-width: 480px) { .wechat-qr-wrap img { width: 180px; } }
 .wechat-assist { margin-top: 10px; }
+
+/* ============ 开服礼包 ============ */
+.gift-box { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(138, 100, 32, 0.3); }
+.gift-title { font-size: 16px; font-weight: 700; color: var(--gold); margin-bottom: 12px; text-align: center; }
+.gift-list { list-style: none; margin-bottom: 14px; }
+.gift-list li { display: flex; align-items: center; justify-content: space-between; padding: 9px 12px; margin-bottom: 8px; border-radius: 10px; background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(138, 100, 32, 0.25); font-size: 14px; }
+.gift-list li span:first-child { color: rgba(243, 234, 216, 0.85); }
+.gift-list li span:last-child { color: var(--gold); font-weight: 700; }
+.btn-gift { width: 100%; margin-top: 4px; }
+.gift-tip { margin-top: 10px; text-align: center; font-size: 12px; color: rgba(217, 164, 65, 0.6); }
+.gift-dialog-list { list-style: none; margin: 6px 0 16px; }
+.gift-dialog-list li { padding: 10px 12px; margin-bottom: 8px; border-radius: 10px; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(138, 100, 32, 0.25); color: rgba(243, 234, 216, 0.85); }
+.gift-dialog-list li::before { content: '🎁 '; }
+.gift-dialog-note { font-size: 13px; line-height: 1.8; color: rgba(243, 234, 216, 0.65); margin-bottom: 18px; }
