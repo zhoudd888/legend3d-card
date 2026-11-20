@@ -271,7 +271,7 @@ function renderPlans() {
       <ul class="plan-features">
         <li>1元 = 10点卡</li><li>1点卡 = 60分钟</li><li>离线连续计时</li>
       </ul>
-      <button class="btn ${p.featured ? '' : 'btn-primary'}" data-toast="「${p.points}点卡」充值为展示用途，不涉及真实支付">立即充值</button>
+<button class="btn ${p.featured ? '' : 'btn-primary'}" data-open-wechat>立即充值</button>
     </div>
   `).join('');
 }
