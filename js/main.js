@@ -65,11 +65,12 @@ const NEWS = [
   },
 ];
 
+const DL_URL = 'https://89097.youxin75.com/qudao.php?s=/Download/f/WzUyMjEsNTIyMCw4OTA5N10=';
 const PLATFORMS = [
-  { name: 'PC 客户端', icon: '🖥️', desc: 'Windows 7/10/11', size: '4.2 GB' },
-  { name: '安卓版', icon: '📱', desc: 'Android 8.0+', size: '1.8 GB' },
-  { name: 'iOS 版', icon: '', desc: 'iOS 13.0+', size: '2.1 GB' },
-  { name: '鸿蒙版', icon: '📱', desc: 'HarmonyOS 2.0+', size: '1.9 GB' },
+  { name: 'PC 客户端', icon: '🖥️', desc: 'Windows 7/10/11', size: '4.2 GB', url: DL_URL },
+  { name: '安卓版', icon: '📱', desc: 'Android 8.0+', size: '1.8 GB', url: DL_URL },
+  { name: 'iOS 版', icon: '', desc: 'iOS 13.0+', size: '2.1 GB', url: DL_URL },
+  { name: '鸿蒙版', icon: '📱', desc: 'HarmonyOS 2.0+', size: '1.9 GB', url: DL_URL },
 ];
 
 const PLANS = [
@@ -249,10 +250,10 @@ function renderDownloads() {
       <h3>${esc(p.name)}</h3>
       <p class="platform-desc">${esc(p.desc)}</p>
       <p class="platform-size">安装包大小约 ${p.size}</p>
-      <button class="btn btn-primary" data-open-wechat>
-        扫码预约下载
-      </button>
-      <div class="platform-demo">扫码添加专属客服，获取下载方式</div>
+      <a class="btn btn-primary" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">
+        ⬇ 立即下载
+      </a>
+      <button class="btn btn-outline btn-sm wechat-assist" data-open-wechat>💬 客服咨询</button>
     </div>
   `).join('');
 }
