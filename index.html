@@ -106,19 +106,29 @@
               </h3>
               <div class="server-row">
                 <span>当前大区</span>
-                <strong>公测一区</strong>
+                <strong>内测点卡一区</strong>
               </div>
               <div class="server-row">
                 <span>开服时间</span>
-                <strong>待定</strong>
+                <strong>2026年11月20日 10:00</strong>
               </div>
               <div class="server-row">
                 <span>已开大区</span>
-                <strong>12 组</strong>
+                <strong>点卡一区</strong>
               </div>
               <div class="server-status">
                 <span class="status-dot status-upcoming"></span>
                 <span>即将开服</span>
+              </div>
+              <div class="gift-box">
+                <h3 class="gift-title">🎁 开服礼包</h3>
+                <ul class="gift-list">
+                  <li><span>新手成长礼包</span><span>×1</span></li>
+                  <li><span>点卡时长奖励</span><span>5 小时</span></li>
+                  <li><span>专属开局称号</span><span>1 枚</span></li>
+                </ul>
+                <button class="btn btn-primary btn-gift" data-open-gift>立即领取</button>
+                <p class="gift-tip">礼包码开服后由专属客服登记发放</p>
               </div>
               <div class="server-demo">※ 以上为演示数据，非真实开服信息</div>
             </aside>
@@ -293,6 +303,21 @@
           <img src="./images/wechat-qr.png" alt="专属客服微信二维码" />
         </div>
         <p class="wechat-qr-tip">扫码添加专属客服，预约游戏下载，获取开服公告与版本资讯</p>
+      </div>
+    </div>
+    <!-- 开服礼包领取弹窗 -->
+    <div class="dialog" id="gift-dialog" hidden>
+      <div class="dialog-backdrop" data-close-gift></div>
+      <div class="dialog-panel" role="dialog" aria-modal="true">
+        <button class="dialog-close" data-close-gift aria-label="关闭">×</button>
+        <h3>开服礼包领取</h3>
+        <ul class="gift-dialog-list">
+          <li>新手成长礼包 ×1</li>
+          <li>点卡时长奖励 5 小时</li>
+          <li>专属开局称号 1 枚</li>
+        </ul>
+        <p class="gift-dialog-note">礼包码将于开服后由专属客服发放，添加客服并登记角色名即可领取。</p>
+        <button class="btn btn-primary" data-open-wechat>添加客服领取礼包码</button>
       </div>
     </div>
     <!-- 公告详情弹窗 -->
